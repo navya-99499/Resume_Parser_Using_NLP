@@ -31,6 +31,7 @@ The parsed output is then converted into **JSON format**, making it easier to us
 - JSON
 
 ---
+## 📂 Project Structure
 
 Resume_Parser_Using_NLP/
 ├── src/
