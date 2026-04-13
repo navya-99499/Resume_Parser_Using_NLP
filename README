@@ -1,0 +1,97 @@
+# 📄 Resume Parser Using NLP
+
+## 📌 Overview
+This project builds a simple **Resume Parser using NLP** to extract structured information from unstructured resume text.
+
+It uses **spaCy**, **Regex**, and basic NLP techniques to identify important resume details such as:
+- name
+- email
+- phone number
+- named entities
+- skills
+
+The parsed output is then converted into **JSON format**, making it easier to use for downstream applications such as candidate screening, resume analysis, and recruitment workflows.
+
+---
+
+## 🛠️ Features
+- Extracts **email addresses** using regex
+- Extracts **phone numbers** using regex
+- Extracts **named entities** using spaCy
+- Extracts **skills** using keyword matching
+- Returns parsed data in **structured JSON format**
+
+---
+
+## ⚙️ Tech Stack
+- Python
+- spaCy
+- Regex
+- scikit-learn
+- JSON
+
+---
+
+## ▶️ How to Run
+
+1. Make sure Python is installed.
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Download spaCy model:
+
+```bash
+python -m spacy download en_core_web_sm
+```
+
+4. Run the script:
+
+```bash
+python src/resume_parser_nlp.py
+```
+
+---
+
+## 🧠 How It Works
+- Loads resume text as input
+- Uses **regex** to extract email and phone number
+- Uses **spaCy Named Entity Recognition** to identify entities such as person names, organizations, and dates
+- Uses predefined skill keywords to match relevant technical skills
+- Stores extracted information in a Python dictionary
+- Converts the final parsed output into JSON format
+
+---
+
+## 📌 Example Output
+The parser returns structured output in a JSON-like format such as:
+
+```json
+{
+    "name": null,
+    "email": "johndoe@example.com",
+    "phone": "123-456-7890",
+    "entities": [
+        ["John Doe", "PERSON"],
+        ["ABC Corp", "ORG"],
+        ["2021-2023", "DATE"]
+    ],
+    "skills": ["Python", "SQL", "Machine Learning", "NLP", "Data Visualization"]
+}
+```
+
+---
+
+## 🚀 Future Improvements
+- Improve **name extraction**
+- Add **education and experience extraction**
+- Support parsing resumes from **PDF and DOCX files**
+- Build a web app interface for uploading resumes
+- Use ML-based skill extraction instead of keyword matching
+
+---
+
+## ⭐ Conclusion
+This project demonstrates how NLP and regular expressions can be combined to transform raw resume text into structured candidate information, which can be useful in HR analytics and resume screening pipelines.
