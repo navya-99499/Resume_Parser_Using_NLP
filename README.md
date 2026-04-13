@@ -31,14 +31,17 @@ The parsed output is then converted into **JSON format**, making it easier to us
 - JSON
 
 ---
+
 ## 📂 Project Structure
 
+```text
 Resume_Parser_Using_NLP/
 ├── src/
 │   └── resume_parser_nlp.py
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
+```
 
 ---
 
